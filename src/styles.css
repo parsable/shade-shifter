@@ -7,11 +7,14 @@ body {
 }
 body {
   font-family: system-ui;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #eee;
 }
 .App {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+.dropdown {
+  font-size: 16px;
 }

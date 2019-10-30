@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Helmet } from "react-helmet";
 import Clipboard from "react-clipboard.js";
+import { PARSABLE_THEME, LUNAR, CRIMSON, EVERGREEN, ASHPHALT } from "./themes";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 import {
   Wrapper,
@@ -21,15 +24,6 @@ class App extends React.Component {
     copied: false
   };
 
-  DEFAULT_THEME = {
-    "primary-a": "blue",
-    "primary-b": "red",
-    "primary-c": "white",
-    "secondary-a": "black",
-    "secondary-b": "purple",
-    "secondary-c": "pink"
-  };
-
   SUPPORTED_ITEMS = {
     "primary-a": "Navbar",
     "primary-b": "Sidebar",
@@ -38,6 +32,12 @@ class App extends React.Component {
     "secondary-b": "Modal Headers",
     "secondary-c": "Foobar"
   };
+
+  DEFAULT_THEME = PARSABLE_THEME;
+
+  DROPDOWN_OPTIONS = ["Parsable", "Lunar", "Crimson", "Evergreen", "Ashphalt"];
+
+  // DEFAULT_OPTION = this.DROPDOWN_OPTIONS[0];
 
   initializeApp = () => {
     this.setState({
@@ -73,6 +73,13 @@ class App extends React.Component {
         </Helmet>
         <Header>
           <span>Parsable Theme Generator</span>
+          <Dropdown
+            className="dropdown"
+            options={this.DROPDOWN_OPTIONS}
+            onChange={this._onSelect}
+            value={this.DEFAULT_OPTION}
+            placeholder="Load a pre-built theme"
+          />
         </Header>
         <Wrapper>
           <ShadeGroup>

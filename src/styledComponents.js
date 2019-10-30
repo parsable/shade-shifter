@@ -19,7 +19,8 @@ export const Header = Styled.header`
   margin-bottom: 30px;
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.08)
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  justify-content: space-between;
   span {
     display: inline-flex;
   }
@@ -42,7 +43,7 @@ export const Footer = Styled.footer`
   flex-direction: row;
   color: #696969;
   a {
-    margin-right: 15px;
+    margin-left: 15px;
   }
 `;
 
