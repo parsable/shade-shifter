@@ -5,6 +5,7 @@ import Clipboard from "react-clipboard.js";
 import { PARSABLE_THEME, LUNAR, CRIMSON, EVERGREEN, ASHPHALT } from "./themes";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import ParsableLogo from "./ParsableLogo";
 
 import {
   Wrapper,
@@ -72,7 +73,12 @@ class App extends React.Component {
           <title>Theme Generator</title>
         </Helmet>
         <Header>
-          <span>Parsable Theme Generator</span>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <span>
+              <ParsableLogo />
+            </span>
+            <span>Parsable Theme Generator</span>
+          </div>
           <Dropdown
             className="dropdown"
             options={this.DROPDOWN_OPTIONS}
@@ -100,11 +106,7 @@ class App extends React.Component {
             <Clipboard
               component="div"
               onSuccess={this.onSuccess}
-              data-clipboard-text={JSON.stringify(
-                this.state.current_theme,
-                null,
-                2
-              )}
+              data-clipboard-text={JSON.stringify(this.state.current_theme)}
             >
               {this.state.showCopyButton ? (
                 <CopyButton>Copy to Clipboard</CopyButton>

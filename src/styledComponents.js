@@ -27,8 +27,7 @@ export const Header = Styled.header`
     display: inline-flex;
   }
   span:first-child {
-    margin-right: 10px;
-    margin-top: 2px
+    margin-right: 15px;
   }
 `;
 export const Content = Styled.div`

@@ -5,7 +5,7 @@ import ColorPickerIcon from "./ColorPickerIcon";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 140px auto 60px;
+  grid-template-columns: 200px auto 60px;
   grid-column-gap: 3px;
   position: relative;
 `;

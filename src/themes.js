@@ -1,44 +1,44 @@
 export const PARSABLE_THEME = {
-  "primary-a": "#0086BF",
-  "primary-b": "#003D57",
-  "primary-c": "#19BAF2",
-  "secondary-a": "#0086BF",
-  "secondary-b": "#0086BF",
-  "secondary-c": "#fff"
+  "custom-primary-a": "#0086BF",
+  "custom-primary-b": "#003D57",
+  "custom-primary-c": "#19BAF2",
+  "custom-secondary-a": "#0086BF",
+  "custom-secondary-b": "#0086BF",
+  "custom-secondary-c": "#fff"
 };
 
 export const LUNAR = {
-  "primary-a": "orange",
-  "primary-b": "greeen",
-  "primary-c": "yellow",
-  "secondary-a": "black",
-  "secondary-b": "purple",
-  "secondary-c": "pink"
+  "custom-primary-a": "orange",
+  "custom-primary-b": "greeen",
+  "custom-primary-c": "yellow",
+  "custom-secondary-a": "black",
+  "custom-secondary-b": "purple",
+  "custom-secondary-c": "pink"
 };
 
 export const EVERGREEN = {
-  "primary-a": "violet",
-  "primary-b": "pink",
-  "primary-c": "white",
-  "secondary-a": "black",
-  "secondary-b": "purple",
-  "secondary-c": "pink"
+  "custom-primary-a": "violet",
+  "custom-primary-b": "pink",
+  "custom-primary-c": "white",
+  "custom-secondary-a": "black",
+  "custom-secondary-b": "purple",
+  "custom-secondary-c": "pink"
 };
 
 export const ASHPHALT = {
-  "primary-a": "peru",
-  "primary-b": "red",
-  "primary-c": "white",
-  "secondary-a": "black",
-  "secondary-b": "purple",
-  "secondary-c": "pink"
+  "custom-primary-a": "peru",
+  "custom-primary-b": "red",
+  "custom-primary-c": "white",
+  "custom-secondary-a": "black",
+  "custom-secondary-b": "purple",
+  "custom-secondary-c": "pink"
 };
 
 export const CRIMSON = {
-  "primary-a": "lightblue",
-  "primary-b": "red",
-  "primary-c": "white",
-  "secondary-a": "black",
-  "secondary-b": "purple",
-  "secondary-c": "pink"
+  "custom-primary-a": "lightblue",
+  "custom-primary-b": "red",
+  "custom-primary-c": "white",
+  "custom-secondary-a": "black",
+  "custom-secondary-b": "purple",
+  "custom-secondary-c": "pink"
 };
