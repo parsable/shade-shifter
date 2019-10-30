@@ -2,7 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Helmet } from "react-helmet";
 import Clipboard from "react-clipboard.js";
-import { PARSABLE_THEME, LUNAR, CRIMSON, EVERGREEN, ASHPHALT } from "./themes";
+import {
+  PARSABLE_THEME,
+  LUNAR_THEME,
+  CRIMSON_THEME,
+  EVERGREEN_THEME,
+  ASHPHALT_THEME
+} from "./themes";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import ParsableLogo from "./ParsableLogo";
@@ -36,9 +42,13 @@ class App extends React.Component {
 
   DEFAULT_THEME = PARSABLE_THEME;
 
-  DROPDOWN_OPTIONS = ["Parsable", "Lunar", "Crimson", "Evergreen", "Ashphalt"];
-
-  // DEFAULT_OPTION = this.DROPDOWN_OPTIONS[0];
+  DROPDOWN_OPTIONS = {
+    Parsable: PARSABLE_THEME,
+    Lunar: LUNAR_THEME,
+    Crimson: CRIMSON_THEME,
+    Evergree: EVERGREEN_THEME,
+    Ashphalt: ASHPHALT_THEME
+  };
 
   initializeApp = () => {
     this.setState({
@@ -64,6 +74,11 @@ class App extends React.Component {
     this.setState({ showCopyButton: false });
     setTimeout(() => this.setState({ showCopyButton: true }), 2000);
   };
+  _onSelect = event => {
+    this.setState({
+      current_theme: this.DROPDOWN_OPTIONS[event.value]
+    });
+  };
 
   render() {
     return (
@@ -81,7 +96,7 @@ class App extends React.Component {
           </div>
           <Dropdown
             className="dropdown"
-            options={this.DROPDOWN_OPTIONS}
+            options={Object.keys(this.DROPDOWN_OPTIONS)}
             onChange={this._onSelect}
             value={this.DEFAULT_OPTION}
             placeholder="Load a pre-built theme"

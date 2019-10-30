@@ -7,16 +7,16 @@ export const PARSABLE_THEME = {
   "custom-secondary-c": "#fff"
 };
 
-export const LUNAR = {
-  "custom-primary-a": "orange",
-  "custom-primary-b": "greeen",
-  "custom-primary-c": "yellow",
-  "custom-secondary-a": "black",
-  "custom-secondary-b": "purple",
-  "custom-secondary-c": "pink"
+export const LUNAR_THEME = {
+  "custom-primary-a": "#323746",
+  "custom-primary-b": "#30457f",
+  "custom-primary-c": "#345ecb",
+  "custom-secondary-a": "#323746",
+  "custom-secondary-b": "#323746",
+  "custom-secondary-c": "#fff"
 };
 
-export const EVERGREEN = {
+export const EVERGREEN_THEME = {
   "custom-primary-a": "violet",
   "custom-primary-b": "pink",
   "custom-primary-c": "white",
@@ -25,7 +25,7 @@ export const EVERGREEN = {
   "custom-secondary-c": "pink"
 };
 
-export const ASHPHALT = {
+export const ASHPHALT_THEME = {
   "custom-primary-a": "peru",
   "custom-primary-b": "red",
   "custom-primary-c": "white",
@@ -34,7 +34,7 @@ export const ASHPHALT = {
   "custom-secondary-c": "pink"
 };
 
-export const CRIMSON = {
+export const CRIMSON_THEME = {
   "custom-primary-a": "lightblue",
   "custom-primary-b": "red",
   "custom-primary-c": "white",
