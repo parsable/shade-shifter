@@ -6,8 +6,7 @@ import {
   PARSABLE_THEME,
   LUNAR_THEME,
   CRIMSON_THEME,
-  EVERGREEN_THEME,
-  ASHPHALT_THEME
+  EVERGREEN_THEME
 } from "./themes";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -46,8 +45,7 @@ class App extends React.Component {
     Parsable: PARSABLE_THEME,
     Lunar: LUNAR_THEME,
     Crimson: CRIMSON_THEME,
-    Evergree: EVERGREEN_THEME,
-    Ashphalt: ASHPHALT_THEME
+    Evergreen: EVERGREEN_THEME
   };
 
   initializeApp = () => {
