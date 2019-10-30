@@ -8,6 +8,8 @@ export const Wrapper = Styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-self: center;
+  width: 900px;
 `;
 export const Header = Styled.header`
   display: flex;
@@ -60,7 +62,8 @@ export const CodeBlock = Styled.div`
   border-radius: 4px;
   padding: 0 20px;
   font-size: 16px;
-  color: #dadada;
+  /* color: #dadada; */
+  color: #3cf56c;
   margin-top: 30px;
 `;
 

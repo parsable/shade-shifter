@@ -117,7 +117,10 @@ class App extends React.Component {
         </Wrapper>
         <Footer>
           <span>The easy way to build themes for Parsable </span>
-          <a href="#" target="_blank">
+          <a
+            href="https://parsable.atlassian.net/wiki/spaces/product/pages/712212666/White-labeling+and+Branding"
+            target="_blank"
+          >
             Confluence Page
           </a>
         </Footer>
