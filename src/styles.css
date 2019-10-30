@@ -1,7 +1,17 @@
 * {
   box-sizing: border-box;
 }
+html,
 body {
-  font-family: monospace;
+  margin: 0;
+}
+body {
+  font-family: system-ui;
   font-size: 18px;
+  background-color: #eee;
+}
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }

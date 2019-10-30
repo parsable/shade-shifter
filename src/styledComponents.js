@@ -5,26 +5,23 @@ import Styled, { css } from "styled-components";
 //---------------------------------------
 
 export const Wrapper = Styled.div`
-max-width: 800px; 
-  margin: 0 auto; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
 `;
 export const Header = Styled.header`
   display: flex;
-  /* justify-content: center; */
-  font-family: monospace;
-  font-size: 23px;
-  font-weight: 700;
+  font-family: system-ui;
+  font-size: 20px;
+  font-weight: 500;
   padding: 15px;
-  color: #000;
-  border-bottom: 2px solid #000; 
-  margin-bottom: 15px;
-  /* background: #000;  */
+  color: #333;
+  margin-bottom: 30px;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08)
   span {
-    display: inline-flex; 
+    display: inline-flex;
   }
   span:first-child {
     margin-right: 10px;
@@ -35,16 +32,55 @@ export const Content = Styled.div`
   flex-grow: 1;
 `;
 export const Footer = Styled.footer`
-  justify-content: space-between;
-  align-items: center; 
-  padding: 10px 0; 
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
   font-size: 15px;
   margin-top: 20px;
   border-top: 1px solid #ddd
   display: flex;
   flex-direction: row;
+  color: #696969;
   a {
-    margin-right: 15px; 
+    margin-right: 15px;
+  }
+`;
+
+export const ShadeGroup = Styled.div`
+  display: grid;
+  grid-row-gap: 3px;
+  row-rule: 1px solid #aaa;
+`;
+
+export const CodeBlock = Styled.div`
+  position: relative;
+  font-family: monospace;
+  background: #1d1d1d;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #dadada;
+  margin-top: 30px;
+`;
+
+export const CopyButton = Styled.button`
+  font-family: system-ui;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background: linear-gradient(#fff, #eaeaea);
+  :hover {
+    background: linear-gradient(#fafafa, #ddd);
+  }
+  :disabled {
+    cursor: not-allowed;
+    border: none;
+    background: #333;
+    color: #38D475;
   }
 `;
 
@@ -65,9 +101,9 @@ export const InputStyles = css`
 export const Select = Styled.select`
   ${InputSpacing}
   ${InputStyles}
-  position: relative; 
+  position: relative;
   background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
-  background-position-x: 90%; 
+  background-position-x: 90%;
   background-size: 12px;
   border-radius: 0;
   -webkit-appearance: none;
@@ -79,57 +115,18 @@ export const Input = Styled.input`
 `;
 export const Button = Styled.button`
   ${InputSpacing}
-  background: #fff; 
+  background: #fff;
   border: 2px solid #000;
-  color: #000; 
-  padding: 10px 15px; 
-  font-size: 16px; 
-  font-family: monospace; 
+  color: #000;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: monospace;
   flex-shrink: 0;
   :hover {
-    background: black; 
-    color: white; 
+    background: black;
+    color: white;
   }
 `;
 export const FormGroup = Styled.div`
-  display:flex; 
-`;
-
-//---------------------------------------
-// Shades
-//---------------------------------------
-
-export const ColorShades = Styled.div`
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column; 
-  background-image: url(https://media.giphy.com/media/BSx6mzbW1ew7K/giphy.gif);
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: -100px -170px; 
-`;
-export const ColorRow = Styled.div`
-  display: grid;
-  grid-template-columns: 2fr 10fr minmax(100px, 6fr);
-  flex-grow: 1;
-  line-height: 40px;
-  margin-bottom: 0;  
-`;
-export const ColorShade = Styled.div`
-  flex-grow: 1; 
-  border-right: 6px solid white; 
-  height: 40px;
-`;
-export const ColorHex = Styled.div`
-  flex-basis: 120px; 
-  padding: 0 10px; 
-  flex-shrink: 0;
-  flex-grow: 0;
-  background: #fff; 
-`;
-export const ColorName = Styled.div`
-  justify-content: flex-start;
-  flex-basis: 70px;
-  text-align: center;
-  background: #fff;
+  display:flex;
 `;
