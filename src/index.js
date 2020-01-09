@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Switch from "react-switch";
 import { Helmet } from "react-helmet";
 import Clipboard from "react-clipboard.js";
 import {
@@ -27,16 +28,41 @@ import IndividualShade from "./IndividualShade";
 class App extends React.Component {
   state = {
     current_theme: null,
-    copied: false
+    copied: false,
+    showInfo: false
   };
 
   SUPPORTED_ITEMS = {
-    "primary-a": "Navbar",
-    "primary-b": "Sidebar",
-    "primary-c": "Buttons",
-    "secondary-a": "Navbar Active",
-    "secondary-b": "Modal Headers",
-    "secondary-c": "Foobar"
+    "custom-primary-a": {
+      web: ["Sidebar Link Background", "Tab --active"],
+      mobile: []
+    },
+    "custom-primary-b": {
+      web: ["Sidebar Background", "Modal Header Background"],
+      mobile: []
+    },
+    "custom-primary-c": {
+      web: [],
+      mobile: []
+    },
+    "custom-secondary-a": {
+      web: [
+        "Button Background",
+        "Button Border",
+        "Dropdown --Focused",
+        "Pills",
+        "Switch --On"
+      ],
+      mobile: []
+    },
+    "custom-secondary-b": {
+      web: ["Sync Banner Background", "Issue Banner Background"],
+      mobile: ["FAB Button Background"]
+    },
+    "custom-secondary-c": {
+      web: ["Customer Name", "Sidebar Link Text", "Modal Header Text"],
+      mobile: []
+    }
   };
 
   DEFAULT_THEME = PARSABLE_THEME;
@@ -51,7 +77,8 @@ class App extends React.Component {
   initializeApp = () => {
     this.setState({
       current_theme: this.DEFAULT_THEME,
-      showCopyButton: true
+      showCopyButton: true,
+      showInfo: false
     });
   };
 
@@ -78,6 +105,10 @@ class App extends React.Component {
     });
   };
 
+  handleSwitch = () => {
+    this.setState({ showInfo: !this.state.showInfo });
+  };
+
   render() {
     return (
       <div className="App">
@@ -92,13 +123,26 @@ class App extends React.Component {
             </span>
             <span>Parsable Theme Generator</span>
           </div>
-          <Dropdown
-            className="dropdown"
-            options={Object.keys(this.DROPDOWN_OPTIONS)}
-            onChange={this._onSelect}
-            value={this.DEFAULT_OPTION}
-            placeholder="Load a pre-built theme"
-          />
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <span style={{ fontSize: "14px" }}>Display Component Info</span>
+            <Switch
+              onChange={this.handleSwitch}
+              showInfo={this.state.showInfo}
+              checked={this.state.showInfo}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              height={20}
+              width={38}
+              onColor="#01ab5d"
+            />
+            <Dropdown
+              className="dropdown"
+              options={Object.keys(this.DROPDOWN_OPTIONS)}
+              onChange={this._onSelect}
+              value={this.DEFAULT_OPTION}
+              placeholder="Load a pre-built theme"
+            />
+          </div>
         </Header>
         <Wrapper>
           <ShadeGroup>
@@ -107,8 +151,9 @@ class App extends React.Component {
                 <IndividualShade
                   token={index}
                   color={this.state.current_theme[index]}
-                  supportedItems={this.SUPPORTED_ITEMS[index]}
                   updateCurrentTheme={this.updateCurrentTheme}
+                  supportedItems={this.SUPPORTED_ITEMS[index]}
+                  showInfo={this.state.showInfo}
                 />
               ))
             ) : (

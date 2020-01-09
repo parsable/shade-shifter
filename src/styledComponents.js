@@ -10,12 +10,13 @@ export const Wrapper = Styled.div`
   flex: 1;
   align-self: center;
   width: 900px;
+  padding-top: 100px;
 `;
 export const Header = Styled.header`
   display: flex;
   font-family: system-ui;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   padding: 15px;
   color: #333;
   margin-bottom: 30px;
@@ -23,6 +24,9 @@ export const Header = Styled.header`
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.08);
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   span {
     display: inline-flex;
   }
@@ -38,7 +42,7 @@ export const Footer = Styled.footer`
   align-items: center;
   padding: 20px 0;
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 50px;
   border-top: 1px solid #ddd
   display: flex;
   flex-direction: row;
@@ -61,7 +65,6 @@ export const CodeBlock = Styled.div`
   border-radius: 4px;
   padding: 0 20px;
   font-size: 16px;
-  /* color: #dadada; */
   color: #3cf56c;
   margin-top: 30px;
 `;
